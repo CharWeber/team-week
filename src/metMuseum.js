@@ -1,4 +1,4 @@
-export default class ArtInstitute {
+export default class MetMuseum {
 
   static searchArt(search) {
     return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${search}&fields=id,title,image_id&limit=10`)
@@ -14,7 +14,7 @@ export default class ArtInstitute {
   }
 
 
-  // api call url: https://api.artic.edu/api/v1/artworks/[id]
+ 
   static searchObject(id){
     return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`)
     .then(function(response){
