@@ -5,6 +5,7 @@ import './css/styles.css';
 // import anime from 'animejs/lib/anime.es.js'
 import ArtInstitute from './ArtInstitute';
 import metMuseum from './metMuseum';
+import Harvard from './harvardMuseum';
 
 
 function displayArt(object) {
@@ -14,7 +15,7 @@ function displayArt(object) {
   <li>Artist: ${object.data.artist_display}</li>
   <li>Style: ${object.data.style_title}<li>
   <li><img class='thumbnail' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'></li>
-  </div>`)
+  </div>`);
 }
 function displayMet(object) {
   $("#metList").append(`
@@ -22,6 +23,16 @@ function displayMet(object) {
   <li>Artist: ${object.artistDisplayName}</li>
   <li>Style: ${object.classification}<li>
   <li><img class='thumbnail' src='${object.primaryImage}'></li>`);
+}
+
+function displayHarvard(data) {
+  data.forEach(function(painting){
+    $("#harvardList").append(`
+    <li>Title: ${painting.title}<li>
+    <li>Artist: ${painting.creditline}</li>
+    <li><img class='thumbnail' src="${painting.images[0].baseimageurl}"></li>
+    `);
+  });
 }
 
 $(document).ready(function () {
@@ -58,4 +69,18 @@ $(document).ready(function () {
         });
       });
   });
+
+  $("#searchForm3").submit(function (e) {
+    e.preventDefault();
+    let search = $('#search3').val();
+    // get ids for paitings with search
+    Harvard.searchArt(search)
+      .then(function (response) {
+        const data = response.records;
+        console.log(data);
+        displayHarvard(data);
+      });
+  });
+
+
 });
