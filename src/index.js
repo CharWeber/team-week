@@ -8,23 +8,6 @@ import metMuseum from './metMuseum';
 
 
 function displayArt(object) {
-<<<<<<< HEAD
-  $("#searchArtInList").append(`
-  <li><div class='card'>
-  <img class='thumbnail' id='${object.data.id}' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'>
-  <h1>${object.data.title}</h1>
-  <p>${object.data.artist_display}, ${object.data.medium_display}</p>
-  </div>
-  `)}
-
-  
-  $(document).ready(function () {
-    $("#searchForm").submit(function (e) {
-      e.preventDefault();
-      let search = $('#search').val();
-      // get ids for paitings with search
-      ArtInstitute.searchArt(search)
-=======
   $("#artInList").append(`
   <li>Title: ${object.data.title}</li>
   <li>Artist: ${object.data.artist_display}</li>
@@ -43,26 +26,23 @@ $(document).ready(function () {
   $("#searchForm").submit(function (e) {
     e.preventDefault();
     let search = $('#search').val();
-
-    $("#searchForm2").submit(function (e) {
-      e.preventDefault();
-      let search = $('#search2').val();
-      // get ids for paitings with search
-
-      ArtInstitute.searchArt(search)
-        .then(function (response) {
-          const data = response.data;
-          data.forEach(function (piece) {
-            // gathering the art data with artist/history/date etc..
-            ArtInstitute.searchObject(piece.id)
-              .then(function (object) {
-                displayArt(object);
-              });
-          });
+    ArtInstitute.searchArt(search)
+    .then(function (response) {
+      const data = response.data;
+      data.forEach(function (piece) {
+        // gathering the art data with artist/history/date etc..
+        ArtInstitute.searchObject(piece.id)
+        .then(function (object) {
+          displayArt(object);
         });
+      });
     });
+  });
+  $("#searchForm2").submit(function (e) {
+    e.preventDefault();
+    let search = $('#search2').val();
+    // get ids for paitings with search
     metMuseum.searchArt(search)
->>>>>>> metmuseum
       .then(function (response) {
         const data = response.data;
         data.forEach(function (piece) {
