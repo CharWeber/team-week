@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500'); */
 
-body {
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+
+html .container-fluid{
+  background-color: rgb(250, 229, 170);
+}
+
+body p{
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Spartan', sans-serif;
   font-size: 16px;
+  
 }
 
 /* Toggle Styles */
@@ -16,10 +24,18 @@ body {
   transition: all 0.5s ease;
 }
 
+.container-fluid {
+  background-image: url('../../assets/images/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #content {
   width: 100%;
   position: relative;
   margin-right: 0;
+  
 }
 
 /* Sidebar Styles */
@@ -91,4 +107,26 @@ body {
   background-repeat: no-repeat;
   margin: 1em;
   padding: 2em;
+}
+
+.btn {
+  float: right;
+}
+
+div.carousel-inner {
+  /* margin: 30px; */
+  background-color: #ffffff;
+  /* border: 1px solid black; */
+  /* opacity: 0.4; */
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+  z-index: 0;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    font-size: 3em;
+    z-index: 20;
+    /* display:table;
+    width:100%;
+    height:100%; */
 }
