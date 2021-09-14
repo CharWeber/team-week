@@ -15,16 +15,16 @@ export default class ArtInstitute {
 
 
   // api call url: https://api.artic.edu/api/v1/artworks/[id]
-  static searchObject(id){
+  static searchObject(id) {
     return fetch(`https://api.artic.edu/api/v1/artworks/${id}`)
-    .then(function(response){
-      if (!response.ok){
-        throw Error(response.statusText)
-      }
-      return response.json();
-    })
-    .catch(function (error) {
-      return error
-    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw Error(response.statusText)
+        }
+        return response.json();
+      })
+      .catch(function (error) {
+        return error
+      })
   }
 }

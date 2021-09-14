@@ -16,7 +16,7 @@ export default class MetMuseum {
 
  
   static searchObject(id){
-    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`)
+    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}?isHighlight=true`)
     .then(function(response){
       if (!response.ok){
         throw Error(response.statusText)
