@@ -21,8 +21,8 @@
         <a href="#">Art Browser</a>
       </header>
 
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form id="searchForm" class="form-inline">
+        <input id='search' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search </button>
       </form>
 
@@ -71,14 +71,14 @@
           </ul>
         </div>
       </nav>
-      <div class="container-fluid">
+      <div class="container-fluid" id="searchResult">
         <h1>Art piece thumbnails will go here</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatem eum cumque similique fugit,
           dolorum expedita sit laboriosam eius obcaecati culpa perferendis odit amet distinctio, quasi cum delectus
           reprehenderit. Asperiores?
         </p>
-
+<ul id="searchArtInList"></ul>
         <div class="row">
           <div class="col">col</div>
           <div class="col">col</div>

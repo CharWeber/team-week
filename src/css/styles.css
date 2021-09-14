@@ -92,3 +92,8 @@ body {
   margin: 1em;
   padding: 2em;
 }
+.thumbnail{
+  height:30%;
+  width:30%;
+  float:right;
+}
