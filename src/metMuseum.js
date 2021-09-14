@@ -1,7 +1,7 @@
 export default class MetMuseum {
 
   static searchArt(search) {
-    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${search}&fields=id,title,image_id&limit=10`)
+    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${search}`)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
