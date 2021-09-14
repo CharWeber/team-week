@@ -10,7 +10,7 @@ body {
   color: #383c3d;
   font-size: 16px;
   margin-left: 110px;
-  /* background-color: #379683; */
+  background-color: #307063;
 }
 
 p {
@@ -103,6 +103,13 @@ li {
 
 #sidebar .nav a i{
   margin-right: 16px;
+}
+
+#sidebar input{
+  margin-bottom:10px;
+}
+#sidebar select{
+  max-width: max-content;
 }
 /* 
 .input-group {
