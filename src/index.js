@@ -26,32 +26,33 @@ $(document).ready(function () {
     e.preventDefault();
     let search = $('#search').val();
 
-$("#searchForm2").submit(function (e) {
-    e.preventDefault();
-    let search = $('#search2').val();
-    // get ids for paitings with search
-    
-ArtInstitute.searchArt(search)
+    $("#searchForm2").submit(function (e) {
+      e.preventDefault();
+      let search = $('#search2').val();
+      // get ids for paitings with search
+
+      ArtInstitute.searchArt(search)
+        .then(function (response) {
+          const data = response.data;
+          data.forEach(function (piece) {
+            // gathering the art data with artist/history/date etc..
+            ArtInstitute.searchObject(piece.id)
+              .then(function (object) {
+                displayArt(object);
+              });
+          });
+        });
+    });
+    metMuseum.searchArt(search)
       .then(function (response) {
         const data = response.data;
         data.forEach(function (piece) {
           // gathering the art data with artist/history/date etc..
-          ArtInstitute.searchObject(piece.id)
+          metMuseum.searchObject(piece.id)
             .then(function (object) {
-              displayArt(object);
+              displayMet(object);
             });
         });
       });
   });
-  metMuseum.searchArt(search)
-    .then(function (response) {
-      const data = response.data;
-      data.forEach(function (piece) {
-        // gathering the art data with artist/history/date etc..
-        metMuseum.searchObject(piece.id)
-          .then(function (object) {
-            displayArt(object);
-          });
-      });
-    });
 });
