@@ -84,9 +84,9 @@ li {
   color: #fff;
 }
 
-#sidebar .nav{
+/* #sidebar .nav{
   
-}
+} */
 
 #sidebar .nav a{
   background: none;
@@ -140,16 +140,8 @@ div.carousel-inner {
 .form-inline {
   margin: 2em 0 0 2em;
 }
-<<<<<<< HEAD
-
-.btn {
-  margin-top: 1em;
-  margin-left: 8.75em;
-}
-=======
 .thumbnail{
   height:30%;
   width:30%;
   float:right;
 }
->>>>>>> integrating
