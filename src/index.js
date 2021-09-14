@@ -43,9 +43,10 @@ $(document).ready(function () {
   });
   $("#searchForm2").submit(function (e) {
     e.preventDefault();
-    let search = $('#search2').val();
+    const search = $('#search2').val();
+    const departmentId = $('#departmentId :selected').val();
     // get ids for paitings with search
-    metMuseum.searchArt(search)
+    metMuseum.searchArt(search, departmentId)
       .then(function (response) {
         const data = response.objectIDs;
         data.forEach(function (piece) {

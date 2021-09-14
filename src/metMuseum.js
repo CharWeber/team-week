@@ -1,7 +1,7 @@
 export default class MetMuseum {
 
-  static searchArt(search) {
-    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${search}`)
+  static searchArt(search, departmentId) {
+    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=${departmentId}&q=${search}`)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -13,10 +13,8 @@ export default class MetMuseum {
       });
   }
 
-
- 
   static searchObject(id){
-    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}?isHighlight=true`)
+    return fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`)
       .then(function(response){
         if (!response.ok){
           throw Error(response.statusText);

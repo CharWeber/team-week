@@ -1,7 +1,7 @@
 export default class ArtInstitute {
 
   static searchArt(search) {
-    return fetch(`https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id&limit=10`)
+    return fetch(`https://api.artic.edu/api/v1/artworks/search?q=${search}&fields=id,title,image_id&limit=20`)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
