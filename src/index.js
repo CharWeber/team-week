@@ -5,19 +5,23 @@ import './css/styles.css';
 // import anime from 'animejs/lib/anime.es.js'
 import ArtInstitute from './ArtInstitute';
 
-function displayArt(object) {
-  $("#artInList").append(`
-  <li>Title: ${object.data.title}</li>
-  <li>Artist: ${object.data.artist_display}</li>
-  <li>Style: ${object.data.style_title}<li>
-  <li><img src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'></li>`);
-}
 
-$(document).ready(function () {
-  $("#searchBtn").click(function () {
-    let search = $('#search').val();
-    // get ids for paitings with search
-    ArtInstitute.searchArt(search)
+function displayArt(object) {
+  $("#searchArtInList").append(`
+  <li><div class='card'>
+  <img class='thumbnail' id='${object.data.id}' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'>
+  <h1>${object.data.title}</h1>
+  <p>${object.data.artist_display}, ${object.data.medium_display}</p>
+  </div>
+  `)}
+
+  
+  $(document).ready(function () {
+    $("#searchForm").submit(function (e) {
+      e.preventDefault();
+      let search = $('#search').val();
+      // get ids for paitings with search
+      ArtInstitute.searchArt(search)
       .then(function (response) {
         const data = response.data;
         data.forEach(function (piece) {
