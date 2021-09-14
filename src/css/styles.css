@@ -2,17 +2,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 
-html .container-fluid{
-  background-color: rgb(250, 229, 170);
-}
 
-body p{
+body p {
   overflow-x: hidden;
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Spartan', sans-serif;
+  color: #CFD8DC;
   font-size: 16px;
+  background-color: #379683;
+  color: #CFD8DC;
   
 }
+
 
 /* Toggle Styles */
 
@@ -25,10 +26,8 @@ body p{
 }
 
 .container-fluid {
-  background-image: url('../../assets/images/bg.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-color: #EFE2BA; */
+  background-color: #379683;
 }
 
 #content {
@@ -45,9 +44,10 @@ body p{
   position: fixed;
   left: 250px;
   width: 250px;
-  height: 100%;
+  height: 97.2%;
   margin-left: -250px;
   overflow-y: auto;
+  /* background: #37474F; */
   background: #37474F;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -93,8 +93,9 @@ body p{
   margin-right: 16px;
 }
 
-.form-inline {
+.input-group {
   margin: 2em;
+  margin-right: 2em;
 }
 
 .btn {
@@ -105,7 +106,7 @@ body p{
 .col {
   background-image: url('https://picsum.photos/100/150');
   background-repeat: no-repeat;
-  margin: 1em;
+  margin: 2em;
   padding: 2em;
 }
 
