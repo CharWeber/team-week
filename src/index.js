@@ -15,7 +15,7 @@ function clrFields() {
 
 
 function displayArt(object) {
-  $("#resultFeed").append(`
+  $("#resultFeed").prepend(`
   <div class="card w-75">
   <img class='thumbnail-img card-img-top' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'>
   <div class="card-body">
@@ -26,7 +26,7 @@ function displayArt(object) {
   </div>`)
 }
 function displayMet(object) {
-  $("#resultFeed").append(`   
+  $("#resultFeed").prepend(`   
   <div class="card w-75">
     <img class='thumbnail-img card-img-top' src="${object.primaryImage}">
     <div class="card-body">
@@ -40,7 +40,7 @@ function displayMet(object) {
 
 function displayHarvard(data) {
   data.forEach(function (painting) {
-    $("#resultFeed").append(`
+    $("#resultFeed").prepend(`
   <div class="card w-75">
     <img class='thumbnail-img card-img-top' src="${painting.images[0].baseimageurl}">
     <div class="card-body">
@@ -61,6 +61,7 @@ $(document).ready(function () {
     ArtInstitute.searchArt(search)
       .then(function (response) {
         const data = response.data;
+        data.reverse();
         data.forEach(function (piece) {
           // gathering the art data with artist/history/date etc..
           ArtInstitute.searchObject(piece.id)
@@ -79,6 +80,7 @@ $(document).ready(function () {
     metMuseum.searchArt(search, departmentId)
       .then(function (response) {
         const data = response.objectIDs;
+        data.reverse();
         data.forEach(function (piece) {
           // gathering the art data with artist/history/date etc..
           metMuseum.searchObject(piece)
@@ -97,6 +99,7 @@ $(document).ready(function () {
     Harvard.searchArt(search)
       .then(function (response) {
         const data = response.records;
+        data.reverse();
         console.log(data);
         displayHarvard(data);
       });
