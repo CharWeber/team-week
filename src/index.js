@@ -25,15 +25,59 @@ function displayMet(object) {
   <li><img class='thumbnail' src='${object.primaryImage}'></li>`);
 }
 
+
+
+
+// function displayHarvard(data) {
+//   data.forEach(function(painting){
+//     $("#harvardList").append(`
+//     <li>Title: ${painting.title}<li>
+//     <li>Artist: ${painting.creditline}</li>
+//     <li><img class='thumbnail' src="${painting.images[0].baseimageurl}"></li>
+//     `);
+//   });
+// }
+
+// function displayHarvard(data) {
+//   data.forEach(function(painting){
+//     $("#harvardList").append(`
+//     <p>Title: ${painting.title}</p>
+//     <p>Artist: ${painting.creditline}</p>
+//     </li><img class='img-thumbnail' src="${painting.images[0].baseimageurl}">
+//     </li>`);
+//   });
+// }
+
 function displayHarvard(data) {
   data.forEach(function(painting){
     $("#harvardList").append(`
-    <li>Title: ${painting.title}<li>
-    <li>Artist: ${painting.creditline}</li>
-    <li><img class='thumbnail' src="${painting.images[0].baseimageurl}"></li>
-    `);
+    
+  <div class="card w-75">
+    <img class='thumbnail-img card-img-top' src="${painting.images[0].baseimageurl}">
+    <div class="card-body">
+      <h5 class="card-title">${painting.title}</h5>
+      <p class="card-text">${painting.creditline}</p>
+    </div>
+    </div>`);
   });
 }
+
+// function displayHarvard(data) {
+//   data.forEach(function(painting){
+//     $(".row").append(`
+
+//     <div class="col-md-4">
+//     <img
+//       src="${painting.images[0].baseimageurl}"
+//       class="w-100 shadow-1-strong rounded mb-4"
+//       alt=""
+//     />
+//     </div>
+
+//     `);
+//   });
+// }
+
 
 $(document).ready(function () {
   $("#searchForm").submit(function (e) {

@@ -7,10 +7,8 @@ html {
 body {
   overflow-x: hidden;
   font-family: 'Spartan', sans-serif;
-  color: #383c3d;
   font-size: 16px;
-  margin-left: 110px;
-  background-color: #307063;
+  background-color: #EEE2DC;
 }
 
 p {
@@ -20,7 +18,7 @@ p {
 /* Toggle Styles */
 
 #viewport {
-  padding-left: 250px;
+  margin-left: 300px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -28,17 +26,9 @@ p {
 }
 
 .container-fluid {
-  /* background-color: #379683; */
   background-color: #EEE2DC;
-  padding: 3em 0 0 11em;
+  padding: 3em 0 0 5em;
   color: #2d3031;
-}
-
-#content {
-  width: 100%;
-  position: relative;
-  margin-right: 0;
-  
 }
 
 ul {
@@ -50,21 +40,20 @@ li {
   margin-bottom: 2em;
 }
 
-/* Sidebar Styles */
-
 #sidebar {
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 350px;
   height: 100%;
-  margin-left: -250px;
-  overflow-y: auto;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   background: #37474F;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 #sidebar header {
@@ -84,13 +73,9 @@ li {
   color: #fff;
 }
 
-/* #sidebar .nav{
-  
-} */
 
 #sidebar .nav a{
   background: none;
-  /* border-bottom: 1px solid #455A64; */
   color: #CFD8DC;
   font-size: 20px;
   padding: 16px 24px;
@@ -110,13 +95,7 @@ li {
 }
 #sidebar select{
   max-width: max-content;
-}
-/* 
-.input-group {
-  margin: 2em;
-  margin-right: 2em;
-} */
-
+} 
 
 .col {
   background-image: url('https://picsum.photos/100/150');
@@ -130,10 +109,7 @@ li {
 }
 
 div.carousel-inner {
-  /* margin: 30px; */
   background-color: #ffffff;
-  /* border: 1px solid black; */
-  /* opacity: 0.4; */
   filter: alpha(opacity=40); /* For IE8 and earlier */
   z-index: 0;
   }
@@ -151,4 +127,14 @@ div.carousel-inner {
   height:30%;
   width:30%;
   float:right;
+}
+
+.thumbnail2{
+  width: 30%;
+  height: auto;
+  float:right;
+}
+
+.card {
+  margin-bottom: 3em !important;
 }
