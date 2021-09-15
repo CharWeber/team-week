@@ -147,3 +147,7 @@ div.carousel-inner {
   background-color: #CFD8DC;
 
 }
+
+#searchForm2 > #search2 > #departmentId {
+  max-width: 220px;
+}
