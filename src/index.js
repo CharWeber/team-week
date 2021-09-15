@@ -13,6 +13,12 @@ function clrFields(){
   $('#search3').html("");
 }
 
+function clrFields(){
+  $('#search').html("");
+  $('#search2').html("");
+  $('#search3').html("");
+}
+
 function displayArt(object) {
   $("#resultFeed").append(`
   <div class="card w-75">
