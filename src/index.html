@@ -13,13 +13,13 @@
         <a href="#">Art Browser</a>
       </header>
       <ul class="nav">
-        <li>
+        <li id="firstMuseum">
           <a href="#">
             <i></i> MET
           </a>
           <form id="searchForm2" class="form-inline">
             <input id="search2" class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
-            <select id="departmentId" type="dropdown">
+            <select id="departmentId" type="dropdown" style="max-width: 225px;">
               <option value="1" selected>American Decorative Art</option>
               <option value="3">Ancient near Eastern Art</option>
               <option value="4">Arms and Armor</option>
@@ -39,33 +39,35 @@
               <option value="19">Photographs</option>
               <option value="21">Modern Art</option>
             </select>
-            <button class="btn btn-outline-success my-2 my-sm-0 text-right" type="submit">Search </button>
+            <button class="btn btn-dark my-2 my-sm-0 text-right" type="submit">Search </button>
           </form>
         </li>
-        <li>
+        <li id="secondMuseum">
           <a href="#">
             <i></i> Harvard Museum
           </a>
           <form id="searchForm3" class="form-inline">
             <input id="search3" class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 text-right" type="submit">Search </button>
+            <button class="btn btn-dark my-2 my-sm-0 text-right" type="submit">Search </button>
           </form>
         </li>
-        <li>
+        <li id="thirdMuseum">
           <a href="#">
             <i></i> Art Institute
           </a>
           <form id="searchForm" class="form-inline">
             <input id="search" class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 text-right" type="submit">Search </button>
+            <button class="btn btn-dark my-2 my-sm-0 text-right" type="submit">Search </button>
           </form>
         </li>
         <li>
-          <a href="#">
-            <i></i> About
+          <a href="#" id="copyright">
+            <!-- <i></i><br> Copyright -->
           </a>
         </li>
       </ul>
+      <footer>Copyright&copy;2021
+      </footer>
     </div>
 
     <!-- carousel -->
@@ -126,7 +128,7 @@
       </div>
     </div>
     <!-- End of carousel -->
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
       <div class="card w-75">
         <img class="card-img-top">
         <div class="card-body">
@@ -137,22 +139,21 @@
             the top national museums.
           </p>
         </div>
-      </div>
-
-      <!-- <ul id="artInList"></ul>
-      <ul id="metList"></ul>
-      <ul id="harvardList"></ul> -->
-
+      </div> -->
+      <div id="message">
+      <h2>Art is beautiful...</h2>
+          <p>
+            We made this project to bring it closer to you. Feel free to look around. Search and enjoy the art
+            provided by
+            the top national museums.
+          </p>
+        </div>
       <div id="resultsDisplay">
         <ul id="resultFeed"></ul>
-      </div
+      </div>
+
     </div>
-
   </div>
-  </div>
-
-
-
   <div class="row">
 
 
