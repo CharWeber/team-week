@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 
 html {
+  /* color: #CFD8DC; */
   color: #CFD8DC;
 }
 
@@ -8,7 +9,10 @@ body {
   overflow-x: hidden;
   font-family: 'Spartan', sans-serif;
   font-size: 16px;
-  background-color: #EEE2DC;
+  /* background-image: url('../../assets/images/papyrus-texture.jpg'); */
+  /* background-color: #EEE2DC; */
+  /* background-color: #5CDB95; */
+  background-color: #8EE4AF;
 }
 
 p {
@@ -26,8 +30,9 @@ p {
 }
 
 .container-fluid {
-  background-color: #EEE2DC;
-  padding: 3em 0 0 5em;
+  background-color: #8EE4AF;
+  /* background-color: #EEE2DC; */
+  padding: 3em 0 0 11em;
   color: #2d3031;
 }
 
@@ -48,6 +53,7 @@ li {
   top: 0;
   left: 0;
   background: #37474F;
+  /* background: #379683; */
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -137,4 +143,7 @@ div.carousel-inner {
 
 .card {
   margin-bottom: 3em !important;
+  box-shadow: 5px 5px 5px grey;
+  background-color: #CFD8DC;
+
 }
