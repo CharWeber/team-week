@@ -4,9 +4,9 @@ html {
   /* color: #CFD8DC; */
   color: #CFD8DC;
 }
-.license {
+/* .license {
   font-size: 7px! important;
-}
+} */
 
 body {
   overflow-x: hidden;
@@ -148,7 +148,4 @@ div.carousel-inner {
   margin-bottom: 3em !important;
   box-shadow: 5px 5px 5px grey;
   background-color: #CFD8DC
-}
-#sidebar .license {
-  font-size: 7px! important;
 }
