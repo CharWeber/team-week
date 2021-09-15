@@ -26,28 +26,6 @@ function displayMet(object) {
 }
 
 
-
-
-// function displayHarvard(data) {
-//   data.forEach(function(painting){
-//     $("#harvardList").append(`
-//     <li>Title: ${painting.title}<li>
-//     <li>Artist: ${painting.creditline}</li>
-//     <li><img class='thumbnail' src="${painting.images[0].baseimageurl}"></li>
-//     `);
-//   });
-// }
-
-// function displayHarvard(data) {
-//   data.forEach(function(painting){
-//     $("#harvardList").append(`
-//     <p>Title: ${painting.title}</p>
-//     <p>Artist: ${painting.creditline}</p>
-//     </li><img class='img-thumbnail' src="${painting.images[0].baseimageurl}">
-//     </li>`);
-//   });
-// }
-
 function displayHarvard(data) {
   data.forEach(function(painting){
     $("#harvardList").append(`
@@ -61,22 +39,6 @@ function displayHarvard(data) {
     </div>`);
   });
 }
-
-// function displayHarvard(data) {
-//   data.forEach(function(painting){
-//     $(".row").append(`
-
-//     <div class="col-md-4">
-//     <img
-//       src="${painting.images[0].baseimageurl}"
-//       class="w-100 shadow-1-strong rounded mb-4"
-//       alt=""
-//     />
-//     </div>
-
-//     `);
-//   });
-// }
 
 
 $(document).ready(function () {
