@@ -148,6 +148,6 @@ div.carousel-inner {
 
 }
 
-#searchForm2 > #search2 > #departmentId {
+#searchForm2 #search2 #departmentId {
   max-width: 220px;
 }
