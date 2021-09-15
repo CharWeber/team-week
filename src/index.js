@@ -7,34 +7,45 @@ import ArtInstitute from './ArtInstitute';
 import metMuseum from './metMuseum';
 import Harvard from './harvardMuseum';
 
+function clrFields(){
+  $('#search').html("");
+  $('#search2').html("");
+  $('#search3').html("");
+}
 
 function displayArt(object) {
-  $("#artInList").append(`
-  <div class='card'>
-  <li>Title: ${object.data.title}</li>
-  <li>Artist: ${object.data.artist_display}</li>
-  <li>Style: ${object.data.style_title}<li>
-  <li><img class='thumbnail' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'></li>
-  </div>`);
+  $("#resultFeed").append(`
+  <div class="card w-75">
+  <img class='thumbnail-img card-img-top' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'>
+  <div class="card-body">
+    <h5 class="card-title">${object.data.title}</h5>
+    <p class="card-text">${object.data.artist_display}, ${object.data.style_title}</p>
+    <p class="card-text"><a href="https://www.artic.edu/artworks/${object.id}/">Museum Page</a></p>
+  </div>
+  </div>`)
 }
 function displayMet(object) {
-  $("#metList").append(`
-  <li>Title: ${object.title}</li>
-  <li>Artist: ${object.artistDisplayName}</li>
-  <li>Style: ${object.classification}<li>
-  <li><img class='thumbnail' src='${object.primaryImage}'></li>`);
+  $("#resultFeed").append(`   
+  <div class="card w-75">
+    <img class='thumbnail-img card-img-top' src="${object.primaryImage}">
+    <div class="card-body">
+      <h5 class="card-title">${object.title}</h5>
+      <p class="card-text">${object.artistDisplayName}, ${object.classification}</p>
+      <p class="card-text"><a href="${object.objectURL}">Museum Page</a></p>
+    </div>
+    </div>`)
 }
 
 
 function displayHarvard(data) {
   data.forEach(function(painting){
-    $("#harvardList").append(`
-    
+    $("#resultFeed").append(`
   <div class="card w-75">
     <img class='thumbnail-img card-img-top' src="${painting.images[0].baseimageurl}">
     <div class="card-body">
       <h5 class="card-title">${painting.title}</h5>
       <p class="card-text">${painting.creditline}</p>
+      <p class="card-text"><a href="${painting.url}">Museum Page</a></p>
     </div>
     </div>`);
   });
@@ -46,6 +57,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("#artInList").html("");
     let search = $('#search').val();
+    clrFields();
     ArtInstitute.searchArt(search)
       .then(function (response) {
         const data = response.data;
@@ -62,6 +74,7 @@ $(document).ready(function () {
     e.preventDefault();
     const search = $('#search2').val();
     const departmentId = $('#departmentId :selected').val();
+    clrFields();
     // get ids for paitings with search
     metMuseum.searchArt(search, departmentId)
       .then(function (response) {
@@ -79,6 +92,7 @@ $(document).ready(function () {
   $("#searchForm3").submit(function (e) {
     e.preventDefault();
     let search = $('#search3').val();
+    clrFields();
     // get ids for paitings with search
     Harvard.searchArt(search)
       .then(function (response) {
@@ -87,6 +101,4 @@ $(document).ready(function () {
         displayHarvard(data);
       });
   });
-
-
 });
