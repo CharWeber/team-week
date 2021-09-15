@@ -13,11 +13,6 @@ function clrFields() {
   $('#search3').val("");
 }
 
-function clrFields(){
-  $('#search').html("");
-  $('#search2').html("");
-  $('#search3').html("");
-}
 
 function displayArt(object) {
   $("#resultFeed").append(`
