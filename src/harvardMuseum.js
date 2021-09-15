@@ -4,7 +4,7 @@ export default class Harvard {
   static searchArt(search) {
     return fetch(`https://api.harvardartmuseums.org/object?size=100&apikey=${process.env.apikey}&title=${search}&classification=Paintings`)
       .then(function (response) {
-        console.log(response);
+
         if (!response.ok) {
           throw Error(response.statusText);
         }
@@ -14,5 +14,5 @@ export default class Harvard {
         return error;
       });
   }
- }
+}
 

@@ -7,17 +7,12 @@ import ArtInstitute from './ArtInstitute';
 import metMuseum from './metMuseum';
 import Harvard from './harvardMuseum';
 
-// function clrFields(){
-//   $('#search').html("");
-//   $('#search2').html("");
-//   $('#search3').html("");
-// }
 
-// function clrFields(){
-//   $('#search').html("");
-//   $('#search2').html("");
-//   $('#search3').html("");
-// }
+function clrFields(){
+  $('#search').val("");
+  $('#search2').val("");
+  $('#search3').val("");
+}
 
 function displayArt(object) {
   $("#resultFeed").prepend(`
