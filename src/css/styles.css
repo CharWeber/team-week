@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 
 html {
-  /* color: #CFD8DC; */
   color: #CFD8DC;
 }
 /* .license {
@@ -12,10 +11,8 @@ body {
   overflow-x: hidden;
   font-family: 'Spartan', sans-serif;
   font-size: 16px;
-  /* background-image: url('../../assets/images/papyrus-texture.jpg'); */
-  /* background-color: #EEE2DC; */
-  /* background-color: #5CDB95; */
-  background-color: #8EE4AF;
+  /* background-color: #8EE4AF; */
+  background-color: #EEE2DC;
 }
 
 p {
@@ -25,7 +22,7 @@ p {
 /* Toggle Styles */
 
 #viewport {
-  margin-left: 300px;
+  margin-left: 315px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -33,24 +30,21 @@ p {
 }
 
 .container-fluid {
-  background-color: #8EE4AF;
+  background-color: #EEE2DC;
+  /* background-color: #8EE4AF; */
   /* background-color: #EEE2DC; */
   padding: 3em 0 0 11em;
   color: #2d3031;
 }
 
-ul {
-  margin-top: 14em;
-}
-
-li {
-  padding-right: 5em;
+/* li {
+  padding-right: 2em;
   margin-bottom: 2em;
-}
+} */
 
 #sidebar {
   height: 100%;
-  width: 300px;
+  width: 315px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -62,14 +56,15 @@ li {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 #sidebar header {
   background-color: #263238;
-  font-size: 20px;
-  line-height: 52px;
-  text-align: center;
+  font-size: 35px;
+  line-height: 82px;
+  text-align: left;
+  padding-left: 1em;
 }
 
 #sidebar header a {
@@ -86,8 +81,10 @@ li {
 #sidebar .nav a{
   background: none;
   color: #CFD8DC;
-  font-size: 20px;
-  padding: 16px 24px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 24px;
 }
 
 #sidebar .nav a:hover{
@@ -100,22 +97,12 @@ li {
 }
 
 #sidebar input{
-  margin-bottom:10px;
+  margin-bottom: 15px;
 }
 #sidebar select{
   max-width: max-content;
+  margin-bottom:20px;
 } 
-
-.col {
-  background-image: url('https://picsum.photos/100/150');
-  background-repeat: no-repeat;
-  margin: 2em;
-  padding: 2em;
-}
-
-.btn {
-  float: right;
-}
 
 div.carousel-inner {
   background-color: #ffffff;
@@ -123,29 +110,68 @@ div.carousel-inner {
   z-index: 0;
   }
 
-  .carousel-caption {
-    position: absolute;
-    font-size: 3em;
-    z-index: 20;
+.carousel-caption {
+  position: absolute;
+  font-size: 3em;
+  z-index: 20;
 }
 
 .form-inline {
   margin: 2em 0 0 2em;
 }
-.thumbnail{
-  height:30%;
-  width:30%;
-  float:right;
-}
-
-.thumbnail2{
-  width: 30%;
-  height: auto;
-  float:right;
-}
 
 .card {
   margin-bottom: 3em !important;
   box-shadow: 5px 5px 5px grey;
-  background-color: #CFD8DC
+  background-color: #CFD8DC;
+}
+
+/* .btn {
+  color: #8EE4AF;
+}
+
+.btn:hover {
+  background-color: #8EE4AF!important;
+  color: #37474F;
+} */
+
+.btn {
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #8EE4AF!important;
+  color: #37474F;
+}
+
+#firstMuseum {
+  background-color: #689775;
+  height: 280px;
+  padding-top: 30px;
+}
+
+#secondMuseum {
+  background-color: #BC463A;
+  height: 270px;
+  padding-top: 50px;
+}
+#thirdMuseum {
+  background-color: #379683;
+  height: 270px;
+  padding-top: 50px;
+}
+
+#copyright {
+  font-size: 12px!important;
+  text-align: center!important;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  color: #CFD8DC;
+}
+
+#message {
+  padding: 3em;
 }
