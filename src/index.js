@@ -20,7 +20,7 @@ function displayArt(object) {
   <div class="card-body">
     <h5 class="card-title">${object.data.title}</h5>
     <p class="card-text">${object.data.artist_display}, ${object.data.style_title}</p>
-    <p class="card-text"><a href="https://www.artic.edu/artworks/${object.id}/">Museum Page</a></p>
+    <p class="card-text"><a href="https://www.artic.edu/artworks/${object.data.id}/">Museum Page</a></p>
   </div>
   </div>`)
 }
@@ -55,7 +55,6 @@ function displayHarvard(data) {
 $(document).ready(function () {
   $("#searchForm").submit(function (e) {
     e.preventDefault();
-    $("#artInList").html("");
     let search = $('#search').val();
     clrFields();
     ArtInstitute.searchArt(search)
