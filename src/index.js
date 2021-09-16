@@ -16,32 +16,32 @@ function clrFields(){
 
 function displayArt(object) {
   $("#resultFeed").prepend(`
-  <div class="card w-75">
+  <div class="card w-75 mx-auto">
   <img class='thumbnail-img card-img-top' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'>
   <div class="card-body">
     <h5 class="card-title">${object.data.title}</h5>
     <p class="card-text">${object.data.artist_display}, ${object.data.style_title}</p>
     <p class="card-text"><a href="https://www.artic.edu/artworks/${object.data.id}/">Museum Page</a></p>
   </div>
-  </div>`)
+  </div>`);
 }
 function displayMet(object) {
   $("#resultFeed").prepend(`   
-  <div class="card w-75">
+  <div class="card w-75 mx-auto">
     <img class='thumbnail-img card-img-top' src="${object.primaryImage}">
     <div class="card-body">
       <h5 class="card-title">${object.title}</h5>
       <p class="card-text">${object.artistDisplayName}, ${object.classification}</p>
       <p class="card-text"><a href="${object.objectURL}">Museum Page</a></p>
     </div>
-    </div>`)
+    </div>`);
 }
 
 
 function displayHarvard(data) {
   data.forEach(function (painting) {
     $("#resultFeed").prepend(`
-  <div class="card w-75">
+  <div class="card w-75 mx-auto">
     <img class='thumbnail-img card-img-top' src="${painting.images[0].baseimageurl}">
     <div class="card-body">
       <h5 class="card-title">${painting.title}</h5>
@@ -100,7 +100,6 @@ $(document).ready(function () {
       .then(function (response) {
         const data = response.records;
         data.reverse();
-        console.log(data);
         displayHarvard(data);
       });
   });

@@ -19,12 +19,12 @@ export default class ArtInstitute {
     return fetch(`https://api.artic.edu/api/v1/artworks/${id}`)
     .then(function(response){
       if (!response.ok){
-        throw Error(response.statusText)
+        throw Error(response.statusText);
       }
       return response.json();
     })
     .catch(function (error) {
-      return error
-    })
+      return error;
+    });
   }
 }

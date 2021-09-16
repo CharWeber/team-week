@@ -3,23 +3,17 @@
 html {
   color: #CFD8DC;
 }
-/* .license {
-  font-size: 7px! important;
-} */
 
 body {
   overflow-x: hidden;
   font-family: 'Spartan', sans-serif;
   font-size: 16px;
-  /* background-color: #8EE4AF; */
   background-color: #EEE2DC;
 }
 
 p {
   font-size: 18px;
 }
-
-/* Toggle Styles */
 
 #viewport {
   margin-left: 315px;
@@ -31,16 +25,9 @@ p {
 
 .container-fluid {
   background-color: #EEE2DC;
-  /* background-color: #8EE4AF; */
-  /* background-color: #EEE2DC; */
   padding: 3em 0 0 11em;
   color: #2d3031;
 }
-
-/* li {
-  padding-right: 2em;
-  margin-bottom: 2em;
-} */
 
 #sidebar {
   height: 100%;
@@ -50,7 +37,6 @@ p {
   top: 0;
   left: 0;
   background: #37474F;
-  /* background: #379683; */
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -76,7 +62,6 @@ p {
 #sidebar header a:hover {
   color: #fff;
 }
-
 
 #sidebar .nav a{
   background: none;
@@ -126,15 +111,6 @@ div.carousel-inner {
   background-color: #CFD8DC;
 }
 
-/* .btn {
-  color: #8EE4AF;
-}
-
-.btn:hover {
-  background-color: #8EE4AF!important;
-  color: #37474F;
-} */
-
 .btn {
   color: #fff;
 }
@@ -146,24 +122,19 @@ div.carousel-inner {
 
 #firstMuseum {
   background-color: #689775;
-  height: 280px;
+  height: 260px;
   padding-top: 30px;
 }
 
 #secondMuseum {
   background-color: #BC463A;
-  height: 270px;
-  padding-top: 50px;
+  height: 250px;
+  padding-top: 35px;
 }
 #thirdMuseum {
   background-color: #379683;
-  height: 270px;
-  padding-top: 50px;
-}
-
-#copyright {
-  font-size: 12px!important;
-  text-align: center!important;
+  height: 250px;
+  padding-top: 35px;
 }
 
 footer {
@@ -173,5 +144,9 @@ footer {
 }
 
 #message {
-  padding: 3em;
+  padding: 3em 15em 0 15em;
+}
+
+.license {
+ padding-top: 15px;
 }
