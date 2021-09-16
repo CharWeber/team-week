@@ -85,6 +85,7 @@ p {
   margin-bottom: 15px;
 }
 #sidebar select{
+  padding:5px;
   max-width: max-content;
   margin-bottom:20px;
 } 
@@ -120,18 +121,18 @@ div.carousel-inner {
   color: #37474F;
 }
 
-#firstMuseum {
+#metMuseum {
   background-color: #689775;
   height: 260px;
   padding-top: 30px;
 }
 
-#secondMuseum {
+#harvardMuseum {
   background-color: #BC463A;
   height: 250px;
   padding-top: 35px;
 }
-#thirdMuseum {
+#artInMuseum {
   background-color: #379683;
   height: 250px;
   padding-top: 35px;
@@ -148,5 +149,8 @@ footer {
 }
 
 .license {
- padding-top: 15px;
+padding-top: 15px;
+}
+.hidden{
+  display:none;
 }

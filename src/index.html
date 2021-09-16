@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Art Museum API</title>
+  <title>Art Browser</title>
 </head>
 
 <body>
@@ -13,9 +13,9 @@
         <a href="#">Art Browser</a>
       </header>
       <ul class="nav">
-        <li id="firstMuseum">
-          <a href="#">
-            <i></i> MET
+        <li id="metMuseum">
+          <a href="https://www.metmuseum.org/">
+            <i></i> the MET Museum
           </a>
           <form id="searchForm2" class="form-inline">
             <input id="search2" class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
@@ -42,19 +42,19 @@
             <button class="btn btn-dark my-2 my-sm-0 text-right" type="submit">Search </button>
           </form>
         </li>
-        <li id="secondMuseum">
-          <a href="#">
-            <i></i> Harvard Museum
+        <li id="harvardMuseum">
+          <a href="https://www.harvard.edu/campus/museums/">
+            <i></i> Harvard Museums
           </a>
           <form id="searchForm3" class="form-inline">
             <input id="search3" class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-dark my-2 my-sm-0 text-right" type="submit">Search </button>
           </form>
         </li>
-        <li id="thirdMuseum">
-          <a href="#">
-            <i></i> Art Institute
-          </a>
+        <li id="artInMuseum">
+            <a href="https://www.artinstitutes.edu/">
+              <i></i> Art Institute
+            </a>
           <form id="searchForm" class="form-inline">
             <input id="search" class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-dark my-2 my-sm-0 text-right" type="submit">Search </button>
@@ -73,8 +73,6 @@
           </li>
         </div>
       </ul>
-      <footer>
-      </footer>
     </div>
     <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
@@ -138,9 +136,15 @@
           the top national museums.
         </p>
       </div>
-      <div id="resultsDisplay">
-        <ul id="resultFeed"></ul>
+      <div id="metDisplay">
+        <ul id="metFeed"></ul>
       </div>
+        <div class="hidden" id="artInDisplay">
+          <ul id="artInFeed"></ul>
+        </div>
+        <div class="hidden" id="harvardDisplay">
+          <ul id="harvardFeed"></ul>
+        </div>
     </div>
   </div>
 </body>

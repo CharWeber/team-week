@@ -15,7 +15,7 @@ function clrFields(){
 }
 
 function displayArt(object) {
-  $("#resultFeed").prepend(`
+  $("#artInFeed").prepend(`
   <div class="card w-75 mx-auto">
   <img class='thumbnail-img card-img-top' src='https://www.artic.edu/iiif/2/${object.data.image_id}/full/843,/0/default.jpg'>
   <div class="card-body">
@@ -26,7 +26,7 @@ function displayArt(object) {
   </div>`);
 }
 function displayMet(object) {
-  $("#resultFeed").prepend(`   
+  $("#metFeed").prepend(`   
   <div class="card w-75 mx-auto">
     <img class='thumbnail-img card-img-top' src="${object.primaryImage}">
     <div class="card-body">
@@ -40,7 +40,7 @@ function displayMet(object) {
 
 function displayHarvard(data) {
   data.forEach(function (painting) {
-    $("#resultFeed").prepend(`
+    $("#harvardFeed").prepend(`
   <div class="card w-75 mx-auto">
     <img class='thumbnail-img card-img-top' src="${painting.images[0].baseimageurl}">
     <div class="card-body">
@@ -50,6 +50,22 @@ function displayHarvard(data) {
     </div>
     </div>`);
   });
+}
+
+function showHarvard(){
+  $("#harvardDisplay").removeClass('hidden')
+  $("#artInDisplay").addClass('hidden')
+  $("#metDisplay").addClass('hidden')
+}
+function showMet(){
+  $("#harvardDisplay").addClass('hidden')
+  $("#artInDisplay").addClass('hidden')
+  $("#metDisplay").removeClass('hidden')
+}
+function showArtIn(){
+  $("#harvardDisplay").addClass('hidden')
+  $("#artInDisplay").removeClass('hidden')
+  $("#metDisplay").addClass('hidden')
 }
 
 
@@ -70,6 +86,7 @@ $(document).ready(function () {
             });
         });
       });
+      showArtIn();
   });
   $("#searchForm2").submit(function (e) {
     e.preventDefault();
@@ -89,6 +106,7 @@ $(document).ready(function () {
             });
         });
       });
+      showMet();
   });
 
   $("#searchForm3").submit(function (e) {
@@ -102,5 +120,19 @@ $(document).ready(function () {
         data.reverse();
         displayHarvard(data);
       });
+    showHarvard();
   });
+
+  $("#metMuseum").click(function(){
+    showMet();
+  });
+
+  $("#harvardMuseum").click(function(){
+    showHarvard();
+  });
+
+  $("#metMuseum").click(function(){
+    showArtIn();
+  });
+
 });
